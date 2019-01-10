@@ -4,7 +4,7 @@
                                    | | | | | | (_) | |  \__ \
                                    |_| |_| |_|\___/|_|  |___/
 ```
-# Mors
+# mors
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](http://www.gnu.org/licenses/agpl-3.0)
 
 A CLI which allows users to convert Morse Code translations to ASCII and ASCII to Morse Code directly from the Terminal. Built with Go Programming Language.
