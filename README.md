@@ -30,7 +30,7 @@ Copyright (c) 2018 Sai Vittal B. All rights reserved.
    $ mors "HELLO"
    >  .... . .-.. .-.. ---
 
-   $mors " .... . .-.. .-.. ---"
+   $ mors " .... . .-.. .-.. ---"
    > HELLO
   ```
 ## Contributing
