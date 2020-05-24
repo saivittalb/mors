@@ -57,5 +57,5 @@ Copyright (c) 2018 Sai Vittal B. All rights reserved.
   ```
 - Create a Pull Request by clicking the _New pull request_ button on your repository page.
 
-<p align="center"> Copyright (c) 2018 Sai Vittal B. All rights reserved.</p>
+<p align="center"> Copyright (c) 2019 Sai Vittal B. All rights reserved.</p>
 <p align="center"> Made with ❤ by <a href="https://github.com/saivittalb">Sai Vittal B</a></p>
