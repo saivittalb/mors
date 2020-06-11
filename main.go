@@ -74,13 +74,13 @@ func reversedMap(originalMap map[string]string) map[string]string {
 }
 
 func convertMorseToAscii (input string) string {
-    splitted := strings.Split(input, " ")
+    split := strings.Split(input, " ")
     var result string = ""
-    for i:=0; i< len(splitted); i++ {
-        if val, ok := morseToAsciiMap[splitted[i]]; ok {
+    for i:=0; i< len(split); i++ {
+        if val, ok := morseToAsciiMap[split[i]]; ok {
             result = result + string(val)
         } else {
-            var errorString string = "  [ERROR] Couldn't match \"" + string(splitted[i]) + "\" to ASCII"
+            var errorString string = "  [ERROR] Couldn't match \"" + string(split[i]) + "\" to ASCII"
             return errorString
         }
     }
