@@ -114,7 +114,7 @@ func main() {
             converted = convertAsciiToMorse(inputString)
         }
         fmt.Println(converted)
-        clipboard.WriteAll(converted)
+        _ = clipboard.WriteAll(converted)
         fmt.Println("Converted string copied to your clipboard")
     } else {
         fmt.Println("Usage: mors [ascii or morse string here]")
