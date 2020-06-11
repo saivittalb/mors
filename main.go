@@ -66,11 +66,11 @@ func init() {
 }
 
 func reversedMap(original_map map[string]string) map[string]string {
-    reversed_map := make(map[string]string)
+    reversedMap := make(map[string]string)
     for key, value := range original_map {
-        reversed_map[value] = key
+        reversedMap[value] = key
     }
-    return reversed_map
+    return reversedMap
 }
 
 func convertMorseToAscii (input string) string {
