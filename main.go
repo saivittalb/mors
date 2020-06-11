@@ -2,10 +2,10 @@ package main
 
 import (
     "fmt"
-    "os"
-    "strings"
-    "regexp"
     "github.com/atotto/clipboard"
+    "os"
+    "regexp"
+    "strings"
 )
 
 var asciiToMorseMap map[string]string
