@@ -2,10 +2,10 @@ package main
 
 import (
     "fmt"
-    "os"
-    "strings"
-    "regexp"
     "github.com/atotto/clipboard"
+    "os"
+    "regexp"
+    "strings"
 )
 
 var asciiToMorseMap map[string]string
@@ -65,22 +65,22 @@ func init() {
     morseToAsciiMap = reversedMap(asciiToMorseMap)
 }
 
-func reversedMap(original_map map[string]string) map[string]string {
-    reversed_map := make(map[string]string)
-    for key, value := range original_map {
-        reversed_map[value] = key
+func reversedMap(originalMap map[string]string) map[string]string {
+    reversedMap := make(map[string]string)
+    for key, value := range originalMap {
+        reversedMap[value] = key
     }
-    return reversed_map
+    return reversedMap
 }
 
 func convertMorseToAscii (input string) string {
-    splitted := strings.Split(input, " ")
+    split := strings.Split(input, " ")
     var result string = ""
-    for i:=0; i< len(splitted); i++ {
-        if val, ok := morseToAsciiMap[splitted[i]]; ok {
+    for i:=0; i< len(split); i++ {
+        if val, ok := morseToAsciiMap[split[i]]; ok {
             result = result + string(val)
         } else {
-            var errorString string = "  [ERROR] Couldn't match \"" + string(splitted[i]) + "\" to ASCII"
+            var errorString string = "  [ERROR] Couldn't match \"" + string(split[i]) + "\" to ASCII"
             return errorString
         }
     }
@@ -106,15 +106,15 @@ func main() {
         var converted string
         if matched, _ := regexp.MatchString("^[\\/.\\-\\s]*$", inputString); matched {
             fmt.Println("Morse string detected ... ")
-            fmt.Println("The corresponding ASCII string is below\n")
+            fmt.Println("The corresponding ASCII string is below")
             converted = convertMorseToAscii(inputString)
         } else {
             fmt.Println("Ascii string detected ... ")
-            fmt.Println("The corresponding Morse string is below\n")
+            fmt.Println("The corresponding Morse string is below")
             converted = convertAsciiToMorse(inputString)
         }
         fmt.Println(converted)
-        clipboard.WriteAll(converted)
+        _ = clipboard.WriteAll(converted)
         fmt.Println("Converted string copied to your clipboard")
     } else {
         fmt.Println("Usage: mors [ascii or morse string here]")
