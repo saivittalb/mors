@@ -65,9 +65,9 @@ func init() {
     morseToAsciiMap = reversedMap(asciiToMorseMap)
 }
 
-func reversedMap(original_map map[string]string) map[string]string {
+func reversedMap(originalMap map[string]string) map[string]string {
     reversedMap := make(map[string]string)
-    for key, value := range original_map {
+    for key, value := range originalMap {
         reversedMap[value] = key
     }
     return reversedMap
